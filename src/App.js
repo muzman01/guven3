@@ -9,7 +9,7 @@ function App() {
   const contractAddress = "0xff39f96d6560F769D5a1f30fFd4aa044AF3296b5"
   const [account, setAccount] = useState("")
   async function requestConnect() {
-    const result = await window.ethereum.request({ method: "eth_requestAccounts" });
+
     const account = (await window.ethereum.request({ method: "eth_accounts" }))[0]
     setAccount(web3.utils.toChecksumAddress(account))
   }
